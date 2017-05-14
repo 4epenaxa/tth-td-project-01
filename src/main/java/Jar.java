@@ -1,6 +1,7 @@
 public class Jar {
   private String itemType;
   private int maxAmount;
+  private int randomFromMaxAmount;
   
   public String getItemType() {
     return itemType;
@@ -8,10 +9,10 @@ public class Jar {
   public int getMaxAmount() {
     return maxAmount;
   }
-  /*
+  
   public Jar (String itemType, int maxAmount){
     this.itemType = itemType;
     this.maxAmount = maxAmount;
   }
-  */
+  
 }

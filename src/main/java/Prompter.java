@@ -1,9 +1,10 @@
 import java.util.Scanner;
 
 public class Prompter {
+  private Jar jar;
+  Scanner scanner = new Scanner(System.in);
 
   public void gettingData() {
-    Scanner scanner = new Scanner(System.in);
     
     System.out.printf("%nLETS PLAY%n-------------%n%nWhat type of item should go in the jar: ");
     String itemType = scanner.nextLine();
@@ -13,9 +14,11 @@ public class Prompter {
     String maxAmountAsString = scanner.nextLine();
     int maxAmount = Integer.parseInt(maxAmountAsString);
     
-    System.out.printf("%n%n%s is your type%n%d is max amount%n",
-                      itemType,
-                      maxAmount); 
+    jar = new Jar(itemType, maxAmount);
+    
+    System.out.printf("%n---------%n%n%n%n---------%n%n%s is your type%n%d is max amount%n",
+                      jar.getItemType(),
+                      jar.getMaxAmount());
   }
   
 }
