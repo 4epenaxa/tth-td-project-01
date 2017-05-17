@@ -4,7 +4,6 @@ public class Jar {
   private String itemType;
   private int maxAmount;
   private int randomFromMaxAmount;
-  private Random random;
 
   public String getItemType() {
     return itemType;
@@ -15,11 +14,9 @@ public class Jar {
   public int getRandomFromMaxAmount() {
     return randomFromMaxAmount;
   }
-
   public Jar (String itemType, int maxAmount){
     this.itemType = itemType;
     this.maxAmount = maxAmount;
-    random = new Random();
-    this.randomFromMaxAmount = random.nextInt(maxAmount) + 1;
+    this.randomFromMaxAmount = new Random().nextInt(maxAmount) + 1;
   }
 }
