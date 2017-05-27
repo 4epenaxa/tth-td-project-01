@@ -34,10 +34,7 @@ public class Prompter {
         if (maxAmount > 0){
           maxAmountable = true;
         } else { System.out.printf("Number must be > 0%n"); }
-
-      } catch(NumberFormatException e) {
-        System.out.printf("Incorrect! Please try again! You need to type a number.%n");
-      } catch(NullPointerException e) {
+      } catch(NumberFormatException | NullPointerException e) {
         System.out.printf("Incorrect! Please try again! You need to type a number.%n");
       }
     } while (! maxAmountable);
